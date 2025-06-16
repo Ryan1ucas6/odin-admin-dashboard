@@ -1,71 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <!-- SIDEBAR -->
     <div class="sidebar">
-        <div class="dashboard">
-            <img src="images/view-dashboard.svg" alt="" class="dashboard-logo">
-            <h2>Dashboard</h2>
-        </div>
-        <div class="navigation">
-            <div class="row1">
-                <img src="images/home-icon.svg" alt="" class="home-icon">
-                <h3>Home</h3>
-            </div>
-            <div class="row2">
-                <img src="images/card-account-details-outline.svg" alt="" class="profile-icon">
-                <h3>Profile</h3>
-            </div>
-            <div class="row3">
-                <img src="images/message.svg" alt="" class="messages-icon">
-                <h3>Messages</h3>
-            </div>
-            <div class="row4">
-                <img src="images/clock-time-three.svg" alt="" class="history-icon">
-                <h3>History</h3>
-            </div>
-            <div class="row5">
-                <img src="images/file-multiple.svg" alt="" class="tasks-icon">
-                <h3>Tasks</h3>
-            </div>
-            <div class="row6">
-                <img src="images/account-group.svg" alt="" class="communities icon">
-                <h3>Communities</h3>
-            </div>
-        </div>
-        <div class="sidebar-extras">
-            <div class="row1">
-                <img src="images/cog.svg" alt="" class="settings-icon">
-                <h3>Settings</h3>
-            </div>
-            <div class="row2">
-                <img src="images/help-box.svg" alt="" class="support-icon">
-                <h3>Support</h3>
-            </div>
-            <div class="row3">
-                <img src="images/shield-check.svg" alt="" class="privacy-icon">
-                <h3>Privacy</h3>
-            </div>
-        </div>
+      <div class="dashboard">
+        <img src="images/view-dashboard.svg" alt="" class="dashboard-logo" />
+        <h2>Dashboard</h2>
+      </div>
+      <div class="navigation">
+        <div><img src="images/home-icon.svg" alt=""><h3>Home</h3></div>
+        <div><img src="images/card-account-details-outline.svg" alt=""><h3>Profile</h3></div>
+        <div><img src="images/message.svg" alt=""><h3>Messages</h3></div>
+        <div><img src="images/clock-time-three.svg" alt=""><h3>History</h3></div>
+        <div><img src="images/file-multiple.svg" alt=""><h3>Tasks</h3></div>
+        <div><img src="images/account-group.svg" alt=""><h3>Communities</h3></div>
+      </div>
+      <div class="sidebar-extras">
+        <div><img src="images/cog.svg" alt=""><h3>Settings</h3></div>
+        <div><img src="images/help-box.svg" alt=""><h3>Support</h3></div>
+        <div><img src="images/shield-check.svg" alt=""><h3>Privacy</h3></div>
+      </div>
     </div>
+
+    <!-- MAIN -->
     <div class="wrapper">
-    <div class="header">
-        <div class="search">
-            <img src="" alt="" class="search-icon">
-            <input type="text" placeholder="">
+      <div class="header">
+        <div class="top-bar">
+          <div class="search">
+            <img src="images/magnify.svg" alt="" class="search-icon" />
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="top-right">
+            <img src="images/bell-ring-outline.svg" alt="Notifications" class="icon-bell" />
+            <img src="images/newpfp.png" alt="Profile" class="icon-profile-pic" />
+            <span class="username">Ryan Lucas</span>
+          </div>
         </div>
-    </div>
 
-    <div class="main-content">
-        <h3 class="title">Your projects</h3>
+        <div class="welcome">
+          <img src="images/newpfp.png" alt="Profile" class="pfp-large" />
+          <div class="greeting-text">
+            <span class="greeting">Hi there,</span><br />
+            <span class="name">Ryan Lucas (@ryan1)</span>
+          </div>
+          <div class="buttons">
+            <button class="new">New</button>
+            <button class="upload">Upload</button>
+            <button class="share">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="main-grid">
+          <!-- LEFT -->
+          <div class="left-column">
+            <h3 class="title">Your Projects</h3>
+            <div class="project-cards">
+              <div class="project-card"><h1>Portfolio Website</h1><p>Responsive personal portfolio website with resume and contact.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+              <div class="project-card"><h1>Weather App</h1><p>Live weather forecasts with API data and icons.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+              <div class="project-card"><h1>Task Tracker</h1><p>Manage and prioritize daily tasks with deadlines.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+              <div class="project-card"><h1>Recipe Finder</h1><p>Find recipes by ingredients and save favorites.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+              <div class="project-card"><h1>Markdown Previewer</h1><p>Write markdown and preview it live with styling.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+              <div class="project-card"><h1>Budget Calculator</h1><p>Track monthly income and expenses with charts.</p><div class="three-icons"><img src="images/heart-outline.svg"><img src="images/eye-plus-outline.svg"><img src="images/share-variant-outline.svg"></div></div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="right-column">
+            <h3 class="title">Announcements</h3>
+            <div class="announcements">
+              <p><strong>System Update</strong><br>Dashboard redesigned for better UX.</p>
+              <p><strong>Policy Update</strong><br>Review new privacy settings today.</p>
+              <p><strong>Weekly Digest</strong><br>Here’s your network’s weekly summary.</p>
+            </div>
+
+            <h3 class="title">Trending</h3>
+            <div class="trending">
+              <p><strong>@frontend-ryan</strong> launched new portfolio</p>
+              <p><strong>@lucas-dev</strong> trending with JS game</p>
+              <p><strong>@uiqueen</strong> released new CSS tool</p>
+              <p><strong>@daniela</strong> built cool dashboard</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </body>
-
-
 </html>

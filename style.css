@@ -1,56 +1,236 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    display: grid;
-    grid-template-columns: 250px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  font-family: Arial, sans-serif;
 }
-.sidebar {
-    width: 250px;
-    background-color: #8b59cc;
-    padding: 15px;
-    height: 100vh;
-}
-.sidebar img {
-    height: 25px;
-    width: 25px;
-}
-.dashboard {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 25px;
-}
-.navigation {
-    padding-bottom: 50px;
-}
-.navigation > *{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 10px;
-}
-.sidebar-extras > *{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 10px;
-}
-.header {
-    background-color: rgb(255, 255, 255);
 
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: 900px;
+  width: 1200px;
+  background-color: black;
 }
-.search input {
-    border: none;
-    background-color: rgb(238, 238, 238);
-    border-radius: 10px;
+
+/* Sidebar */
+.sidebar {
+  background-color: #8b59cc;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
-.main-content {
-    background-color: rgb(238, 238, 238);
+
+.dashboard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
 }
+
+/* All sidebar icons */
+.sidebar img {
+  height: 18px;
+  width: 18px;
+}
+
+/* Only dashboard logo */
+.dashboard-logo {
+  height: 36px;
+  width: 36px;
+}
+
+.navigation > *,
+.sidebar-extras > * {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 0;
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+
+/* Wrapper / Header */
 .wrapper {
-    display: grid;
-    grid-template-rows: 200px auto;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
+
+.header {
+  display: grid;
+  grid-template-rows: auto auto;
+  background-color: white;
+  padding: 20px 40px;
+  gap: 30px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(238, 238, 238);
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 14px;
+  height: 15px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-bell {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.pfp-large {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.greeting-text {
+  font-size: 16px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  background-color: #8b59cc;
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Main Content */
+.main-content {
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  border-left: 6px solid #8b59cc;
+  position: relative;
+  min-height: 160px;
+}
+
+.project-card h1 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.project-card p {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.project-card img {
+  height: 20px;
+  width: 20px;
+}
+
+.three-icons {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.announcements,
+.trending {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-grow: 1;
+}
+
